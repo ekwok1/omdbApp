@@ -9,9 +9,12 @@ This will install the dependencies required to run the app.
 Here's a link just in case: https://yarnpkg.com/lang/en/docs/install/
 
 ## Running the App
-Please run this command in the root directory.
+Please run both of these commands in the root directory.
 
+Build the main.css file from main.scss
 `npm run build-css`
+
+Start a lite-server
 `npm start`
 
 ## Technologies
