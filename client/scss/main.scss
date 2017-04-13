@@ -1,0 +1,33 @@
+@mixin overwriteATagStyling() {
+	text-decoration: none;
+	color: white;
+}
+
+.search {
+	margin-top: 20px;
+}
+
+.search__image, .detailedSearch__image {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.search__button-container {
+	text-align: center;
+}
+
+.search__button-text {
+	@include overwriteATagStyling()
+	&:hover { @include overwriteATagStyling() }
+	&:active { @include overwriteATagStyling() }
+	&:link { @include overwriteATagStyling() }
+	&:visited { @include overwriteATagStyling() }
+}
+
+.detailedSearch__body {
+	width: 100%;
+}
+
+.detailedSearch__details {
+	font-size: 18px;
+}

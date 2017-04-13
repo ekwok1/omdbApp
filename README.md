@@ -11,6 +11,7 @@ Here's a link just in case: https://yarnpkg.com/lang/en/docs/install/
 ## Running the App
 Please run this command in the root directory.
 
+`npm run build-css`
 `npm start`
 
 ## Technologies
