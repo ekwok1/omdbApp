@@ -13,7 +13,7 @@
 
 	function service($http) {
 		this.search = (query) => {
-			var moviesArr = [];
+			var response = [];
 
 			var path = OMDB_API_SEARCH_ENDPOINT + query.searchQuery;
 			if (query.queryType == "series") {
@@ -26,13 +26,13 @@
 				.then(movies => {
 					if (movies.data.Search) {
 						movies.data.Search.forEach(movie => {
-							moviesArr.push(movie);
+							response.push(movie);
 						})
 					} else {
-						moviesArr.push(movies.data);
+						response.push(movies.data);
 					}
 				})
-			return moviesArr;
+			return response;
 		}
 
 		this.searchById = (id) => {
