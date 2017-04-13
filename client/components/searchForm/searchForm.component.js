@@ -13,7 +13,8 @@
 		vm.movies = [];
 
 		function search() {
-			$http.get("http://www.omdbapi.com/?s=" + vm.query.searchQuery)
+			vm.movies = [];
+			$http.get("http://www.omdbapi.com/?type=movie&s=" + vm.query.searchQuery)
 				.then(movies => {
 					movies.data.Search.forEach(movie => {
 						vm.movies.push(movie);

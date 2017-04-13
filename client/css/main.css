@@ -1,0 +1,12 @@
+.search {
+	margin-top: 20px;
+}
+
+.search__image {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.search__button-container {
+	text-align: center;
+}
