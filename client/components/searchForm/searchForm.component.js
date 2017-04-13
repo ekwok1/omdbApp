@@ -5,21 +5,15 @@
 			controller: controller
 		});
 
-	controller.$inject = ["$http"];
+	controller.$inject = ["movieService"];
 
-	function controller($http) {
+	function controller(movieService) {
 		const vm = this;
 		vm.search = search;
 		vm.movies = [];
 
-		function search() {
-			vm.movies = [];
-			$http.get("http://www.omdbapi.com/?type=movie&s=" + vm.query.searchQuery)
-				.then(movies => {
-					movies.data.Search.forEach(movie => {
-						vm.movies.push(movie);
-					});
-				});
+		function search(query) {
+			vm.movies = movieService.search(query);
 			vm.query = {};
 		}
 	}
