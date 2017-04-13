@@ -15,7 +15,6 @@
 		vm.searchById = searchById;
 
 		function searchById(id) {
-			console.log("calling this method");
 			return movieService.searchById(id);
 		}
 	}

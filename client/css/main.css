@@ -10,3 +10,9 @@
 .search__button-container {
 	text-align: center;
 }
+
+.search__button-text, .search__button-text:hover, .search__button-text:active,
+.search__button-text:link, .search__button-text:visited {
+	text-decoration: none;
+	color: white;
+}
