@@ -1,5 +1,11 @@
 <div class="row search" ng-show="$ctrl.toggleView">
-    <div ng-repeat="movie in $ctrl.movies">
+
+    <h3 class="col-xs-12" ng-if="$ctrl.movies[0].Response == 'False'">
+        Sorry, but OMDb could not find any results for you.
+    </h3>
+
+    <div ng-if="!$ctrl.movies[0].Response == 'False'" ng-repeat="movie in $ctrl.movies">
+        {{$ctrl.movies}}
         <div class="clearfix" ng-if="$index % 6 == 0"></div>
         <div class="col-sm-2">
             <div class="panel panel-primary">

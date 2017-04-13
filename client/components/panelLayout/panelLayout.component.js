@@ -16,8 +16,6 @@
 		vm.toggleView = true;
 		vm.searchById = searchById;
 
-		console.log(vm);
-
 		function searchById(id) {
 			vm.result = movieService.searchById(id);
 			vm.toggleView = !vm.toggleView;
