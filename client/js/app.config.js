@@ -6,17 +6,12 @@
 
 	function config($stateProvider, $locationProvider, $urlRouterProvider) {
 		$locationProvider.html5Mode(true);
-		// $stateProvider
-		// 	.state({
-		// 		name: 'landingPage',
-		// 		url: '/',
-		// 		component: 'test'
-		// 	})
-		// 	.state({
-		// 		name: 'home',
-		// 		url: '/test',
-		// 		component: 'test'
-		// 	})
+		$stateProvider
+			.state({
+				name: 'landingPage',
+				url: '/',
+				component: 'searchForm'
+			})
 		$urlRouterProvider.otherwise("/");
 	}
 })();
