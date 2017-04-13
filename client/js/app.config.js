@@ -2,14 +2,15 @@
 	angular.module("omdbApp")
 	   	   .config(config)
 
-	config.$inject = ['$stateProvider', '$locationProvider'];
+	config.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
 
-	function config($stateProvider, $locationProvider) {
+	function config($stateProvider, $locationProvider, $urlRouterProvider) {
 		$locationProvider.html5Mode(true);
 		$stateProvider.state({
 			name: 'home',
 			url: '/',
 			component: 'test'
 		})
+		$urlRouterProvider.otherwise("/");
 	}
 })();
