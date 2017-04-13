@@ -1,9 +1,9 @@
-<form>
+<form name="searchForm" ng-submit="$ctrl.search()">
 	<legend>Search the Open Movie Database!</legend>
 	<div class="row">
 		<div class="form-group col-xs-4">
 		 	<label for="searchQuery" class="control-label">Search Query</label>
-		 	<input type="text" class="form-control" placeholder="Lord of the Rings">
+		 	<input type="text" class="form-control" placeholder="Lord of the Rings" ng-model="$ctrl.query.searchQuery">
 		</div>
 	</div>
 	<div class="row">	
@@ -14,3 +14,5 @@
 		</div>
 	</div>
 </form>
+
+{{ $ctrl.movies }}
