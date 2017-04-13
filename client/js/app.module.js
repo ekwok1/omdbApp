@@ -1,2 +1,1 @@
-angular
-	.module("omdbApp", []);
+angular.module("omdbApp", ['ui.router']);
