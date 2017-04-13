@@ -1,7 +1,7 @@
 (function() {
 	angular.module("omdbApp")
 		.component("navbar", {
-			templateUrl: "/js/navbar/navbar.template.html",
+			templateUrl: "/components/navbar/navbar.template.html",
 			controller: controller
 		});
 

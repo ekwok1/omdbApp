@@ -1,0 +1,20 @@
+<div class="row search">
+    <div ng-repeat="movie in $ctrl.movies">
+        <div class="clearfix" ng-if="$index % 6 == 0"></div>
+        <div class="col-sm-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading search__title">
+                    {{movie.Title}} ({{movie.Year}})
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                       <img ng-src="{{movie.Poster}}" class="search__image">
+                    </div>
+                    <div class="row search__button-container">
+                        <button class="btn btn-default" ng-click="$ctrl.search(movie.imdbID">Movie Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
