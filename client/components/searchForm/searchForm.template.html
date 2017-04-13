@@ -6,6 +6,23 @@
 		 	<input type="text" class="form-control" placeholder="Lord of the Rings" ng-model="$ctrl.query.searchQuery">
 		</div>
 	</div>
+	<div class="row">
+		<div class="form-group col-xs-4">
+			<label class="mr-sm-2" for="queryType">Query Type</label>
+<!-- 			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" ng-model="$ctrl.query.queryType">
+			  <option selected="selected">Choose...</option>
+			  <option value="movie">Movie</option>
+			  <option value="series">Series</option>
+			  <option value="episode">Episode</option>
+			</select> -->
+			<select class="form-control" ng-model="$ctrl.query.queryType">
+				<option value="">Select query type...</option>
+			  <option value="movie">Movie</option>
+			  <option value="series">Series</option>
+			  <option value="episode">Episode</option>
+			</select>
+		</div>
+	</div>
 	<div class="row">	
 		<div class="form-group">
 		  <div class="col-xs-2">
