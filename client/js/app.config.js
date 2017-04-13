@@ -12,11 +12,6 @@
 				url: '/',
 				component: 'searchForm'
 			})
-			.state({
-				name: 'detailedView',
-				url: '/movie/:id',
-				component: 'singlePanelLayout'
-			})
 		$urlRouterProvider.otherwise("/");
 	}
 })();

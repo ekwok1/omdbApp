@@ -1,4 +1,4 @@
-<div class="row search">
+<div class="row search" ng-show="$ctrl.toggleView">
     <div ng-repeat="movie in $ctrl.movies">
         <div class="clearfix" ng-if="$index % 6 == 0"></div>
         <div class="col-sm-2">
@@ -12,7 +12,7 @@
                     </div>
                     <div class="row search__button-container">
                         <button class="btn btn-default">
-                            <a class="search__button-text" ng-href="/movie/{{movie.imdbID}}">Movie Details</a>
+                            <a class="search__button-text" ng-click="$ctrl.searchById(movie.imdbID)">Movie Details</a>
                         </button>
                     </div>
                 </div>
@@ -20,3 +20,5 @@
         </div>
     </div>
 </div>
+
+<single-panel-layout result="$ctrl.result" view="$ctrl.toggleView" ng-hide="$ctrl.toggleView"></single-panel-layout>

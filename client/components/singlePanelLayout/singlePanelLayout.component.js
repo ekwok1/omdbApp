@@ -1,20 +1,22 @@
 (function() {
 	angular.module("omdbApp")
 		.component("singlePanelLayout", {
+			bindings: {
+				"result": "<",
+				"view": "="
+			},
 			templateUrl: "/components/singlePanelLayout/singlePanelLayout.template.html",
 			controller: controller
 		});
 
-	controller.$inject = ["movieService", "$location"];
+	controller.$inject = ["movieService"];
 
-	function controller(movieService, $location) {
+	function controller(movieService) {
 		const vm = this;
-		vm.imdbID = $location.path().split("/")[2];
-		vm.searchById = searchById;
-		vm.searchById(vm.imdbID);
+		vm.toggleView = toggleView;
 
-		function searchById(id) {
-			vm.movie = movieService.searchById(id);
+		function toggleView() {
+			vm.view = !vm.view;
 		}
 	}
 })();

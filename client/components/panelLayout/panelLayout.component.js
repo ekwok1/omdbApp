@@ -12,10 +12,12 @@
 
 	function controller(movieService) {
 		const vm = this;
+		vm.toggleView = true;
 		vm.searchById = searchById;
 
 		function searchById(id) {
-			return movieService.searchById(id);
+			vm.result = movieService.searchById(id);
+			vm.toggleView = !vm.toggleView;
 		}
 	}
 })();
