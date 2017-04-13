@@ -5,7 +5,7 @@
 				showForm: "=",
 				movies: "<"
 			},
-			templateUrl: "/components/panelLayout/panelLayout.template.html",
+			templateUrl: "components/panelLayout/panelLayout.template.html",
 			controller: controller
 		});
 
@@ -13,7 +13,6 @@
 
 	function controller(movieService) {
 		const vm = this;
-		console.log(vm);
 		vm.toggleView = true;
 		vm.searchById = searchById;
 

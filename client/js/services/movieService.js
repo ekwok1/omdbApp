@@ -22,13 +22,15 @@
 				path += TYPE.MOVIE;
 			}
 
-			console.log(path);
-
 			$http.get(path)
 				.then(movies => {
-					movies.data.Search.forEach(movie => {
-						moviesArr.push(movie);
-					})
+					if (movies.data.Search) {
+						movies.data.Search.forEach(movie => {
+							moviesArr.push(movie);
+						})
+					} else {
+						moviesArr.push(movies.data);
+					}
 				})
 			return moviesArr;
 		}

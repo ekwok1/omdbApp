@@ -6,7 +6,7 @@
 				"showForm": "=",
 				"view": "="
 			},
-			templateUrl: "/components/singlePanelLayout/singlePanelLayout.template.html",
+			templateUrl: "components/singlePanelLayout/singlePanelLayout.template.html",
 			controller: controller
 		});
 

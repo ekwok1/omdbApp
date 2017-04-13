@@ -1,7 +1,7 @@
 (function() {
 	angular.module("omdbApp")
 		.component("searchForm", {
-			templateUrl: "/components/searchForm/searchForm.template.html",
+			templateUrl: "components/searchForm/searchForm.template.html",
 			controller: controller
 		});
 
