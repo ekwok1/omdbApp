@@ -1,4 +1,4 @@
-<form name="searchForm" ng-submit="$ctrl.search($ctrl.query)">
+<form name="searchForm" ng-show="$ctrl.showForm" ng-submit="$ctrl.search($ctrl.query)">
 	<legend>Search the Open Movie Database!</legend>
 	<div class="row">
 		<div class="form-group col-xs-4">
@@ -14,4 +14,4 @@
 		</div>
 	</div>
 </form>
-<panel-layout movies="$ctrl.movies"></panel-layout>
+<panel-layout movies="$ctrl.movies" show-form="$ctrl.showForm"></panel-layout>

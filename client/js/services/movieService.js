@@ -23,10 +23,12 @@
 		}
 
 		this.searchById = (id) => {
-			$http.get(OMDB_API_ID_ENDPOINT + id + TYPE.MOVIE)
+			var movieData = [];
+			$http.get(OMDB_API_ID_ENDPOINT + id)
 				.then(movie => {
-					console.log(movie);
-				})
+					movieData.push(movie.data);
+				});
+			return movieData;
 		}
 	}
 })();
