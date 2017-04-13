@@ -17,4 +17,3 @@ Please run this command in the root directory.
 -Angular 1.6
 -Sass
 -Bootstrap/Bootswatch
--Karma/Jasmine (Unit Testing)
