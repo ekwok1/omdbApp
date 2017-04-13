@@ -1,0 +1,27 @@
+{
+  "name": "omdbApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ekwok1/omdbApp.git",
+  "author": "eugene.kwok",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.2"
+  },
+  "dependencies": {
+    "angular": "1.6.0",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
