@@ -5,7 +5,8 @@
   "repository": "git@github.com:ekwok1/omdbApp.git",
   "author": "eugene.kwok",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+    "build-css": "node-sass --include-path scss client/scss/main.scss client/css/main.css"
   },
   "devDependencies": {
     "lite-server": "^2.2.2",
