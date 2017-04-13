@@ -1,11 +1,44 @@
-<div class="panel panel-primary">
+<!-- <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel primary</h3>
+    <h3 class="panel-title">{{$ctrl.result[0].Title}} ({{$ctrl.result[0].Year}})</h3>
   </div>
   <div class="panel-body">
+  	<div>Directed by: {{$ctrl.result[0].Director}}</div>
+  	<div>Starring: {{$ctrl.result[0].Actors}}</div>
     {{$ctrl.result}}
 	<button ng-click="$ctrl.toggleView()">Go Back</button>
   </div>
+</div> -->
+
+<div class="panel panel-primary detailedSearch">
+  <div class="panel-heading">
+  	<h3>{{$ctrl.result[0].Title}} ({{$ctrl.result[0].Year}})</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-3">
+      	<img ng-src="{{$ctrl.result[0].Poster}}" class="detailedSearch__image">
+      </div>
+      <div class="col-sm-9">
+      	<div class="detailedSearch__body">
+	      	<h3>General Information:</h3>
+	      	<div class="detailedSearch__details"><b>Directed by:</b> {{$ctrl.result[0].Director}}</div>
+	      	<div class="detailedSearch__details"><b>Starring:</b> {{$ctrl.result[0].Actors}}</div>
+	      	<div class="detailedSearch__details"><b>Genre:</b> {{$ctrl.result[0].Genre}}</div>
+	      	<div class="detailedSearch__details"><b>Runtime:</b> {{$ctrl.result[0].Runtime}}</div>
+	      	<div class="detailedSearch__details"><b>Plot:</b> {{$ctrl.result[0].Plot}}</div>
+	      	<div class="detailedSearch__details"><b>Rated:</b> {{$ctrl.result[0].Rated}}</div>
+	      	<h3>Rating</h3>
+	      	<div ng-repeat="source in $ctrl.result[0].Ratings">
+	      		<div class="detailedSearch__details">
+	      			<b>{{source.Source}}:</b> {{source.Value}}
+	      		</div>
+	      	</div>
+      	</div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<button class="btn btn-primary" ng-click="$ctrl.toggleView()">Go Back</button>
 
