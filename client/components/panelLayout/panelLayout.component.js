@@ -2,6 +2,7 @@
 	angular.module("omdbApp")
 		.component("panelLayout", {
 			bindings: {
+				showForm: "=",
 				movies: "<"
 			},
 			templateUrl: "/components/panelLayout/panelLayout.template.html",
@@ -12,12 +13,14 @@
 
 	function controller(movieService) {
 		const vm = this;
+		console.log(vm);
 		vm.toggleView = true;
 		vm.searchById = searchById;
 
 		function searchById(id) {
 			vm.result = movieService.searchById(id);
 			vm.toggleView = !vm.toggleView;
+			vm.showForm = !vm.showForm;
 		}
 	}
 })();

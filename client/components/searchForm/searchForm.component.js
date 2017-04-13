@@ -9,6 +9,7 @@
 
 	function controller(movieService) {
 		const vm = this;
+		vm.showForm = true;
 		vm.search = search;
 		vm.movies;
 

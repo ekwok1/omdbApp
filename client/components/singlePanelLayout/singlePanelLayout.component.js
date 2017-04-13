@@ -3,6 +3,7 @@
 		.component("singlePanelLayout", {
 			bindings: {
 				"result": "<",
+				"showForm": "=",
 				"view": "="
 			},
 			templateUrl: "/components/singlePanelLayout/singlePanelLayout.template.html",
@@ -17,6 +18,7 @@
 
 		function toggleView() {
 			vm.view = !vm.view;
+			vm.showForm = !vm.showForm;
 		}
 	}
 })();
