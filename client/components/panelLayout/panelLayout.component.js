@@ -8,12 +8,15 @@
 			controller: controller
 		});
 
-	function controller() {
-		const vm = this;
-		vm.search = search;
+	controller.$inject = ["movieService"];
 
-		function search(id) {
-			console.log(id);
+	function controller(movieService) {
+		const vm = this;
+		vm.searchById = searchById;
+
+		function searchById(id) {
+			console.log("calling this method");
+			return movieService.searchById(id);
 		}
 	}
 })();
